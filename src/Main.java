@@ -3,18 +3,7 @@ import java.net.Socket;
 
 public class Main {
     public static void main(String [] args) throws IOException, InterruptedException {
-//        while(true) {
-//            String line;
-//            Process p = Runtime.getRuntime().exec("telnet localhost 5000");
-//            Reader r = new InputStreamReader(p.getInputStream());
-//            BufferedReader in = new BufferedReader(r);
-//            while ((line = in.readLine()) != null) {
-//                System.out.println(line);
-//                if(line != "Connected") Runtime.getRuntime().exec("java -jar RaspiOpener.jar");
-//            }
-//            in.close();
-//            Thread.sleep(30000);
-//        }
+
         while(true) {
             pingz(5000);
             Thread.sleep(20000);
@@ -62,7 +51,7 @@ public class Main {
         }
         catch(Exception e){
             Runtime.getRuntime().exec("java -jar RaspiOpener.jar");
-            System.out.println("geckräscht");
+            System.out.println("CALL AN AMBULANCE, CALL AN AMBULANCE!");
         }
     }
 
