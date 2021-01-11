@@ -16,19 +16,14 @@ public class Main {
         try {
             Socket clientSocket = new Socket("localhost", port);
 
-        PrintWriter outToServer = new PrintWriter(
+            PrintWriter outToServer = new PrintWriter(
                 clientSocket.getOutputStream(), true);
 
-        BufferedReader inFromServer = new BufferedReader(new InputStreamReader(
+            BufferedReader inFromServer = new BufferedReader(new InputStreamReader(
                 clientSocket.getInputStream()));
-
-
 
             ToServer = "How are you?";
             outToServer.println(ToServer);
-
-            FromServer = inFromServer.readLine();
-            System.out.println(FromServer);
 
             FromServer = inFromServer.readLine();
             System.out.println(FromServer);
